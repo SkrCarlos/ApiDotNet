@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+JFFW3IwegXZO/E7L559mX+dSsQMPqv+ppJk1AAIG3GqdtO7QPzbXiB4vGK69ndW1CSq4j+OdMFnYU2vZv+z+g==",
+  "dgSpecHash": "AoO88TOLIf92koRv+tSkNwKcmnkKkUdVTlMDHeize+OQX7+mk/lPJvh0yAJKVvoXInul5C6aEAiEPg/rQRguPw==",
   "success": true,
-  "projectFilePath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/Api.csproj",
+  "projectFilePath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/carloscarreon/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/microsoft.data.sqlite.core/7.0.10/microsoft.data.sqlite.core.7.0.10.nupkg.sha512",
@@ -23,12 +23,17 @@
     "/Users/carloscarreon/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/carloscarreon/.nuget/packages/microsoft.identitymodel.abstractions/7.0.0/microsoft.identitymodel.abstractions.7.0.0.nupkg.sha512",
+    "/Users/carloscarreon/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.0.0/microsoft.identitymodel.jsonwebtokens.7.0.0.nupkg.sha512",
+    "/Users/carloscarreon/.nuget/packages/microsoft.identitymodel.logging/7.0.0/microsoft.identitymodel.logging.7.0.0.nupkg.sha512",
+    "/Users/carloscarreon/.nuget/packages/microsoft.identitymodel.tokens/7.0.0/microsoft.identitymodel.tokens.7.0.0.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.4/sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/sqlitepclraw.core/2.1.4/sqlitepclraw.core.2.1.4.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.4/sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.4/sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
+    "/Users/carloscarreon/.nuget/packages/system.identitymodel.tokens.jwt/7.0.0/system.identitymodel.tokens.jwt.7.0.0.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/carloscarreon/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"

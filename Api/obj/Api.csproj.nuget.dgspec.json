@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/Api.csproj": {}
+    "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/API.csproj": {}
   },
   "projects": {
-    "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/Api.csproj": {
+    "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/Api.csproj",
-        "projectName": "Api",
-        "projectPath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/Api.csproj",
+        "projectUniqueName": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/API.csproj",
+        "projectName": "API",
+        "projectPath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/API.csproj",
         "packagesPath": "/Users/carloscarreon/.nuget/packages/",
-        "outputPath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/Api/obj/",
+        "outputPath": "/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/carloscarreon/.nuget/NuGet/NuGet.Config"
@@ -47,6 +47,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [

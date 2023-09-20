@@ -1,6 +1,6 @@
-using Api.Data;
-using Api.Interfaces;
-using Api.Services;
+using API.Data;
+using API.Interfaces;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,8 +14,9 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
 
-// COnfigure the HTTP request pipeline.
+// Configure the HTTP request pipeline.
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
