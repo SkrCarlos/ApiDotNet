@@ -197,3 +197,6 @@ C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Sy
 /Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/obj/Debug/net7.0/API.pdb
 /Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 /Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/obj/Debug/net7.0/ref/API.dll
+/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/carloscarreon/Documents/Universidad/9no/ServiciosWeb/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
