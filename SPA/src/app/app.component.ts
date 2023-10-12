@@ -1,6 +1,6 @@
 import { Component , OnInit} from '@angular/core';
 import { AccountService } from './_services/account.service';
-import { IUser } from './_models/iusers';
+import { IUser } from './_models/users';
 
 @Component({
   selector: 'app-root',
@@ -9,17 +9,18 @@ import { IUser } from './_models/iusers';
 })
 export class AppComponent implements OnInit {
   title = 'Citas App';
+  users:any;
 
-  constructor(private AccountService: AccountService) {}
+  constructor(private accountService: AccountService) {}
 
   ngOnInit(): void {
     this.setCurrentUser();
   }
 
   setCurrentUser(): void {
-    const userString = localStorage.getItem('user');
-    if(!userString) return;
-    const user: IUser = JSON.parse(userString);
-    this.AccountService.setCurrentUser(user);
+   const userString = localStorage.getItem("user");
+   if(!userString) return;
+   const user: IUser = JSON.parse(userString); 
+   this.accountService.setCurrentUser(user);
   }
 }

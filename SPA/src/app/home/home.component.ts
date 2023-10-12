@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  registerMode = false; 
-  users:any;
+  registerMode = false;
+  users: any;
   
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.getUsers();
   }
 
-  registerToggle(): void {
+  registerToggle(): void{
     this.registerMode = !this.registerMode;
   }
-  
-  getUsers(): void {
+
+  getUsers(){
     this.http.get('https://localhost:5001/api/users').subscribe({
       next: response => this.users = response,
       error: error => console.log(error),
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  cancelRegisterMode(event: boolean): void {
+  cancelRegisterMode(event: boolean): void{
     this.registerMode = event;
   }
 }
