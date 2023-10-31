@@ -1,4 +1,4 @@
-using API.Data;
+﻿using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,34 +13,34 @@ public class BuggyController : BaseApiController
     {
         _context = context;
     }
-
     [Authorize]
     [HttpGet("auth")]
     public ActionResult<string> GetSecret()
     {
-        return "Secreto de la app";
+        return "Secreto de la API";
     }
-    
     [HttpGet("not-found")]
-    public ActionResult<AppUser> GetNotFoud()
+    public ActionResult<AppUser> GetNotFound()
     {
         var thing = _context.Users.Find(-1);
-        if(thing == null) return NotFound();
+
+        if (thing == null) return NotFound();
+
         return thing;
     }
-
     [HttpGet("server-error")]
     public ActionResult<string> GetServerError()
     {
         var thing = _context.Users.Find(-1);
-        var thingToReturn = thing.ToString();
-        return thingToReturn;
-    }
 
+        var thingToReturn = thing.ToString();
+
+        return thingToReturn;
+
+    }
     [HttpGet("bad-request")]
     public ActionResult<string> GetBadRequest()
     {
-        return BadRequest("Usted ha solicitado algo de forma incorrecta.");
+        return BadRequest("Esta es una solicitud incorrecta");
     }
-
 }
