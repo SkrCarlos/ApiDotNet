@@ -1,5 +1,5 @@
 namespace API.DTOs;
-public class MemberDtos
+public class MemberDto
 {
     public int Id { get; set; }
     public string UserName { get; set; }
@@ -14,4 +14,5 @@ public class MemberDtos
     public string City { get; set; }
     public string Country { get; set; }
     public List<PhotoDto> Photos { get; set; }
+    public object PhotoUrl { get; internal set; }
 }
