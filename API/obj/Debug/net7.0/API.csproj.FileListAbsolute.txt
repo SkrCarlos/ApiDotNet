@@ -133,6 +133,8 @@ C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Mi
 C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
 C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Data/UserSeedData.json
+C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/AutoMapper.dll
+C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/appsettings.Development.json
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/appsettings.json
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/Data/UserSeedData.json
@@ -141,6 +143,8 @@ C:/Users/Administrator/Documents/9o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Da
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/API.runtimeconfig.json
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/API.dll
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/API.pdb
+/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/AutoMapper.dll
+/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/Humanizer.dll
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/bin/Debug/net7.0/Microsoft.Data.Sqlite.dll
