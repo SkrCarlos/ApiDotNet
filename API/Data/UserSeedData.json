@@ -108,7 +108,7 @@
       "Country": "Honduras",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/man/9.jpg",
+          "Url": "https://randomuser.me/api/portraits/men/9.jpg",
           "IsMain": true
         }
       ]
@@ -127,7 +127,7 @@
       "Country": "Angola",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/man/56.jpg",
+          "Url": "https://randomuser.me/api/portraits/men/56.jpg",
           "IsMain": true
         }
       ]
@@ -146,7 +146,7 @@
       "Country": "Togo",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/man/68.jpg",
+          "Url": "https://randomuser.me/api/portraits/men/68.jpg",
           "IsMain": true
         }
       ]
@@ -165,7 +165,7 @@
       "Country": "Japan",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/man/78.jpg",
+          "Url": "https://randomuser.me/api/portraits/men/78.jpg",
           "IsMain": true
         }
       ]
@@ -184,7 +184,7 @@
       "Country": "Liechtenstein",
       "Photos": [
         {
-          "Url": "https://randomuser.me/api/portraits/man/98.jpg",
+          "Url": "https://randomuser.me/api/portraits/men/98.jpg",
           "IsMain": true
         }
       ]
