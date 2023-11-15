@@ -19,7 +19,7 @@
             </ul>
 
             <div class="dropdown" *ngIf="accountService.currentUser$| async as user" dropdown>
-                <a class="dropdown-toggle text-ligth text-decoration-none" dropdownToggle>Bienvenido {{user.username|titlecase}}</a>
+                <a class="dropdown-toggle text-white text-decoration-none" dropdownToggle>Bienvenido {{user.username|titlecase}}</a>
                 <div class="dropdown-menu" *dropdownMenu>
                     <a class="dropdown-item">Perfil</a>
                     <a class="dropdown-item" (click)="logout()">Salir</a>
