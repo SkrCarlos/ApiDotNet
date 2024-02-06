@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/API.csproj": {}
+    "/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/API.csproj": {}
   },
   "projects": {
-    "/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/API.csproj": {
+    "/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/API.csproj",
+        "projectUniqueName": "/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/API.csproj",
+        "projectPath": "/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/API.csproj",
         "packagesPath": "/Users/carloscarreon/.nuget/packages/",
-        "outputPath": "/Users/carloscarreon/Documents/Universidad/9no/Servicios Web/API/obj/",
+        "outputPath": "/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/carloscarreon/.nuget/NuGet/NuGet.Config"
@@ -44,21 +44,25 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.15, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.3.1, )"
             }
           },
           "imports": [

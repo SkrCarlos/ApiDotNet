@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace API.Data.Migrations
+namespace API.data.Migrations
 {
     /// <inheritdoc />
-    public partial class UserPassword : Migration
+    public partial class UserPasswordAdded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

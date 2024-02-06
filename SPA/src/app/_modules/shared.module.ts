@@ -4,20 +4,21 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    BsDropdownModule.forRoot(),
     ToastrModule.forRoot({
-      timeOut: 1000,
-      positionClass: "toast-bottom-right",
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
       preventDuplicates: true,
       progressBar: true
     }),
   ],
-  exports :[
+  exports: [
     BsDropdownModule,
     ToastrModule,
     TabsModule
