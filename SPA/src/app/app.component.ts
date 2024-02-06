@@ -1,4 +1,5 @@
 import { Component , OnInit} from '@angular/core';
+import { HttpClient } from '@angular/common/http'; // Import HttpClientModule
 import { AccountService } from './_services/account.service';
 import { IUser } from './_models/iuser';
 
@@ -11,16 +12,19 @@ export class AppComponent implements OnInit {
   title = 'Citas App';
   users:any;
 
-  constructor(private accountService: AccountService) {}
+  constructor(private http: HttpClient, private accountService: AccountService) {}
 
   ngOnInit(): void {
     this.setCurrentUser();
   }
 
   setCurrentUser(): void {
-   const userString = localStorage.getItem("user");
-   if(!userString) return;
-   const user: IUser = JSON.parse(userString); 
-   this.accountService.setCurrentUser(user);
+    const userString = localStorage.getItem("user");
+    if (!userString) {
+      return;
+    }
+    const user: IUser = JSON.parse(userString);
+    this.accountService.setCurrentUser(user);
   }
+
 }

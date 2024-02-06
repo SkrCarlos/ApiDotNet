@@ -1,46 +1,61 @@
-﻿using API.Data;
-using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using API.data;
+using API.Entities;
 
-namespace API.Controllers;
 
-public class BuggyController : BaseApiController
+namespace API.Controllers
 {
-    private readonly DataContext _context;
-
-    public BuggyController(DataContext context)
+    public class BuggyController : BaseApiController
     {
-        _context = context;
-    }
-    [Authorize]
-    [HttpGet("auth")]
-    public ActionResult<string> GetSecret()
-    {
-        return "Secreto de la API";
-    }
-    [HttpGet("not-found")]
-    public ActionResult<AppUser> GetNotFound()
-    {
-        var thing = _context.Users.Find(-1);
+        private readonly DataContext _context;
+        public BuggyController(DataContext context)
+        {
+            _context = context;
+        }
 
-        if (thing == null) return NotFound();
+        [Authorize]
+        [HttpGet("auth")]
 
-        return thing;
-    }
-    [HttpGet("server-error")]
-    public ActionResult<string> GetServerError()
-    {
-        var thing = _context.Users.Find(-1);
+        public ActionResult<string> GetSecret()
+        {
+            return "Secreto de la API";
+        }
 
-        var thingToReturn = thing.ToString();
+        [HttpGet("not-found")]
 
-        return thingToReturn;
+        public ActionResult<AppUser> GetNotFound()
+        {
+            var thing = _context.Users.Find(-1);
 
-    }
-    [HttpGet("bad-request")]
-    public ActionResult<string> GetBadRequest()
-    {
-        return BadRequest("Esta es una solicitud incorrecta");
+            if (thing == null) return NotFound();
+
+            return thing;
+        }
+
+        [HttpGet("server-error")]
+
+        public ActionResult<string> GetServerError()
+        {
+
+
+            var thing = _context.Users.Find(-1);
+
+            var thingToReturn = thing.ToString();
+
+            return thingToReturn;
+
+
+        }
+
+        [HttpGet("bad-request")]
+
+        public ActionResult<string> GetBadRequest()
+        {
+            return BadRequest("Esta es una solicitud incorrecta");
+        }
+
+
+
     }
 }
