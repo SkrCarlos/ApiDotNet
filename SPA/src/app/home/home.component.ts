@@ -7,19 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  registerMode=false;
-  users:any;
-
+  registerMode = false;
+  users: any;
+  
   constructor() { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void { 
   }
 
-  registerToggle(){
+  registerToggle(): void{
     this.registerMode = !this.registerMode;
   }
-
 
   cancelRegisterMode(event: boolean): void{
     this.registerMode = event;

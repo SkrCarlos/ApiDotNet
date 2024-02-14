@@ -7,10 +7,11 @@ import { IMember } from 'src/app/_models/imember';
   styleUrls: ['./member-card.component.css']
 })
 export class MemberCardComponent implements OnInit {
-  @Input() member: IMember | undefined;
+  @Input()  member: IMember | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
 }

@@ -1,47 +1,44 @@
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
-using API.Errors;
 
-namespace API.Middleware
+namespace API;
+
+public class ExceptionMiddleware
 {
-    public class ExceptionMiddleware
+    public RequestDelegate _next { get; }
+
+    public ILogger<ExceptionMiddleware> _logger { get; }
+    public IHostEnvironment _env { get; }   
+
+  
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env)
     {
-        public RequestDelegate _next { get; }
+        _next = next;
+        _logger = logger;
+        _env = env;
+    }
 
-        public ILogger<ExceptionMiddleware> _logger { get; }
-
-        public IHostEnvironment _env { get; }
-        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env)
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
         {
-            _next = next;
-            _logger = logger;
-            _env = env;
+            await _next(context);
         }
-
-        public async Task InvokeAsync(HttpContext context)
+        catch (Exception ex)
         {
-            try
-            {
-                await _next(context);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, ex.Message);
+            _logger.LogError(ex, ex.Message);
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-                context.Response.ContentType = "application/json";
-                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            var response = _env.IsDevelopment()
+                ? new ApiException(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())
+                : new ApiException(context.Response.StatusCode, ex.Message, "Error interno del servidor");
 
-                var response = _env.IsDevelopment()
-                    ? new ApiException(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())
-                    : new ApiException(context.Response.StatusCode, "Error del servidor");
+            var options = new JsonSerializerOptions{PropertyNamingPolicy = JsonNamingPolicy.CamelCase};
 
-                var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            var json = JsonSerializer.Serialize(response, options);
 
-                var json = JsonSerializer.Serialize(response, options);
-
-                await context.Response.WriteAsync(json);
-            }
+            await context.Response.WriteAsync(json);
         }
-
     }
 }
