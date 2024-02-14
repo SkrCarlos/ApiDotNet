@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace API.data.Migrations
+namespace API.Data.Migrations
 {
     /// <inheritdoc />
     public partial class ExtendedUserEntity : Migration
@@ -11,6 +11,16 @@ namespace API.data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterColumn<string>(
+                name: "UserName",
+                table: "Users",
+                type: "TEXT",
+                nullable: false,
+                defaultValue: "",
+                oldClrType: typeof(string),
+                oldType: "TEXT",
+                oldNullable: true);
+
             migrationBuilder.AddColumn<string>(
                 name: "City",
                 table: "Users",
@@ -147,6 +157,14 @@ namespace API.data.Migrations
             migrationBuilder.DropColumn(
                 name: "LookingFor",
                 table: "Users");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "UserName",
+                table: "Users",
+                type: "TEXT",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "TEXT");
         }
     }
 }
