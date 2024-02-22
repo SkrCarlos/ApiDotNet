@@ -203,12 +203,13 @@ C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/staticwebassets.build.json
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/staticwebassets.development.json
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/scopedcss/bundle/API.styles.css
-C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.csproj.CopyComplete
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.dll
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/refint/API.dll
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.pdb
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.genruntimeconfig.cache
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/ref/API.dll
+C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.sourcelink.json
+C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.csproj.Up2Date
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/appsettings.Development.json
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/appsettings.json
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Data/UserSeedData.json
@@ -219,6 +220,7 @@ C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/API.pdb
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/AutoMapper.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/CloudinaryDotNet.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Humanizer.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Microsoft.Data.Sqlite.dll
@@ -235,6 +237,7 @@ C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/SQLitePCLRaw.batteries_v2.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/SQLitePCLRaw.core.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll

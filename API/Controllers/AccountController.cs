@@ -1,4 +1,3 @@
-using System.Data;
 using System.Security.Cryptography;
 using API.Entities;
 using API.Data;
@@ -7,7 +6,6 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using API.DTOs;
 using API.Interfaces;
-using System.Security.Principal;
 
 namespace API.Controllers
 {
