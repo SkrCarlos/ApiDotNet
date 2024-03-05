@@ -210,6 +210,8 @@ C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/ref/API.dll
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.sourcelink.json
 C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/obj/Debug/net7.0/API.csproj.Up2Date
+C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/bin/Debug/net7.0/CloudinaryDotNet.dll
+C:/Users/Administrator/Documents/9o y 10o Semestre/SW/CitasApp/API/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/appsettings.Development.json
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/appsettings.json
 /Users/carloscarreon/Documents/Universidad/9no Semestre/Servicios Web/API/bin/Debug/net7.0/Data/UserSeedData.json
