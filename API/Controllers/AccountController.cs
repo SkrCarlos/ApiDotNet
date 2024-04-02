@@ -1,78 +1,82 @@
 using System.Security.Cryptography;
-using API.Entities;
-using API.Data;
-using Microsoft.AspNetCore.Mvc;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
+using API.Data;
 using API.DTOs;
+using API.Entities;
 using API.Interfaces;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers
+namespace API.Controllers;
+
+public class AccountController : BaseApiController
 {
-    public class AccountController : BaseApiController
+    private readonly DataContext _context;
+    private readonly ITokenService _tokenService;
+    private readonly IMapper _mapper;
+    private const string USER_PASSWORD_ERROR_MESSAGE = "Usuario o contraseña incorrectos";
+
+    public AccountController(DataContext context, ITokenService tokenService, IMapper mapper)
     {
-        private readonly DataContext _context;
-        private readonly ITokenService _tokenService;
-        private const string  USER_PASSWORD_ERROR_MESSAGE = "Usuario o password incorrecta";
-        public AccountController(DataContext context, ITokenService tokenService)
+        _context = context;
+        _tokenService = tokenService;
+        _mapper = mapper;
+    }
+
+    [HttpPost("register")]
+    public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
+    {
+        if (await UserExists(registerDto.UserName)) return BadRequest("Ya existe ese nombre de usuario");
+
+        var user = _mapper.Map<AppUser>(registerDto);
+
+        using var hmac = new HMACSHA512();
+
+        user.UserName = registerDto.UserName;
+        user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password));
+        user.PasswordSalt = hmac.Key;
+
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync();
+
+        return new UserDto
         {
-            _context = context;
-            _tokenService = tokenService;
-        }
+            Username = user.UserName,
+            Token = _tokenService.CreateToken(user),
+            KnownAs = user.KnownAs
+        };
+    }
 
-        [HttpPost("register")]
-        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
-        {
-            if (await ValidateUser(registerDto.UserName)) return BadRequest("Username is taken");
-
-            using var hmac = new HMACSHA512();
-
-            var user = new AppUser
-            {
-                UserName = registerDto.UserName,
-                PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key
-            };
-
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            return new UserDto
-            {
-                Username = user.UserName,
-                Token = _tokenService.CreateToken(user)
-            };
-        }
-
-
-    [HttpPost ("login")]
-    public async Task<ActionResult<UserDto>> Login(LoginDtos loginDtos)
+    [HttpPost("login")]
+    public async Task<ActionResult<UserDto>> Login(LoginDtos loginDto)
     {
         var user = await _context.Users
             .Include(p => p.Photos)
-            .SingleOrDefaultAsync(x => x.UserName.ToLower() == loginDtos.UserName.ToLower());
+            .SingleOrDefaultAsync(x => x.UserName.ToLower() == loginDto.UserName.ToLower());
 
-        if(user == null) return Unauthorized(USER_PASSWORD_ERROR_MESSAGE);
+        if (user == null) return Unauthorized(USER_PASSWORD_ERROR_MESSAGE);
 
         using var hmac = new HMACSHA512(user.PasswordSalt);
 
-        var  computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDtos.Password)); 
+        var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
 
-        for(int i =0 ; i <computedHash.Length; i++)
+        for (int i = 0; i < computedHash.Length; i++)
         {
-            if(computedHash[i] != user.PasswordHash[i]) return Unauthorized(USER_PASSWORD_ERROR_MESSAGE);
+            if (computedHash[i] != user.PasswordHash[i]) return Unauthorized(USER_PASSWORD_ERROR_MESSAGE);
         }
 
         return new UserDto
         {
             Username = user.UserName,
-            Token = _tokenService.CreateToken(user), 
-            PhotoUrl = user.Photos.FirstOrDefault(p => p.IsMain)?.Url
+            Token = _tokenService.CreateToken(user),
+            PhotoUrl = user.Photos.FirstOrDefault(p => p.IsMain)?.Url,
+            KnownAs = user.KnownAs
         };
     }
-        private async Task<bool> ValidateUser(string username)
-        {
-            return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
-        }
-    }
+
+    private async Task<bool> UserExists(string username)
+    {
+        return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
+    }
 }
